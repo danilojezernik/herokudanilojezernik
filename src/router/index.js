@@ -1,25 +1,58 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import {createRouter, createWebHistory} from 'vue-router'
+
+import IndexComp from '@/components/Index/IndexComp.vue'
+import BiographyComp from '@/components/Biography/BiographyComp.vue'
+import ExperiencesComp from '@/components/Experiences/ExperiencesComp.vue'
+import ProjektiComp from '@/components/Projekti/ProjektiComp.vue'
+import ContactComp from '@/components/Contact/ContactComp.vue'
+import MediaComp from '@/components/Media/MediaComp.vue'
+import GamesComp from '@/components/Games/GamesComp.vue'
+import TicTacToeComp from '@/components/Games/TicTacToe/TicTacToeComp.vue'
+import NotFound from '@/components/404/404.vue'
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    {
+        path: '/',
+        component: IndexComp
+    },
+    {
+        path: '/biography',
+        component: BiographyComp
+    },
+    {
+        path: '/experiences',
+        component: ExperiencesComp
+    },
+    {
+        path: '/contact',
+        component: ContactComp
+    },
+    {
+        path: '/projects',
+        component: ProjektiComp
+    },
+    {
+        path: '/games',
+        component: GamesComp
+    },
+    {
+        path: '/games/tic-tac-toe',
+        component: TicTacToeComp
+    },
+    {
+        path: '/media',
+        component: MediaComp
+    },
+    {
+        path: '/:notFound(.*)',
+        component: NotFound
+    }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+    history: createWebHistory(process.env.BASE_URL),
+    routes,
+    linkActiveClass: 'active'
 })
 
 export default router

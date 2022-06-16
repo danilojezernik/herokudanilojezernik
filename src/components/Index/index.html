@@ -1,0 +1,47 @@
+<div class="container text-center p-3">
+
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-lg-5 ps-sm-5">
+            <p class="text-start txt-size text-secondary m-0 p-0">&#60;!DOCTYPE html&#62;</p>
+            <p class="text-start txt-size text-secondary m-0 p-0 ps-4">&#60;head&#62;</p>
+            <p class="text-start txt-size text-secondary m-0 p-0 ps-5">&#60;title&#62;</p>
+            <p class="text-start text-center text-secondary m-0 p-0">
+                <span class="text-white display-5 fw-bold">Fullstack software developer</span>
+            </p>
+            <p class="text-start txt-size text-secondary m-0 p-0 ps-5">&#60;/title&#62;</p>
+            <p class="text-start txt-size text-secondary m-0 p-0 ps-4">&#60;/head&#62;</p>
+            <p class="text-start txt-size text-secondary m-0 p-0">&#60;body&#62;</p>
+
+            <span class="text-success display-6 fw-bold">&#60;b&#62;</span>
+            <v-typical
+                    class="blink"
+                    :steps="['Danilo', 1000, 'Jezernik', 500, 'Danilo Jezernik', 1000]"
+                    :loop="1"
+                    :wrapper="'h1'"
+            ></v-typical>
+            <span class="text-success display-6 fw-bold">&#60;/b&#62;</span>
+
+            <img class="d-block mx-auto img-fluid d-block d-lg-none animate__animated animate__jackInTheBox"
+                 src="@/assets/djdeveloper_index.png">
+
+            <p class="lead mb-4">This is my personal website explaining who I am and what I do. Always available for
+                business opportunities. Feel free to contact me any time!</p>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <router-link type="button" class="btn btn-success btn-lg px-4 gap-3" to="/projects">Projects
+                </router-link>
+                <router-link type="button" class="btn btn-outline-secondary btn-lg px-4" to="/contact">Contact
+                </router-link>
+            </div>
+            <p class="text-start txt-size text-secondary m-0 p-0 mt-2">&#60;/body&#62;</p>
+            <p class="text-start txt-size text-secondary m-0 p-0">&#60;/html&#62;</p>
+        </div>
+
+        <div class="col-lg-7">
+            <span class="lead p-vertical float-end text-center d-none d-xxl-block">"Programska oprema in katedrale sta skoraj enaka - najprej ju zgradimo, nato molimo."</span>
+            <img class="d-block mx-auto img-fluid d-none d-lg-block animate__animated animate__jackInTheBox"
+                 src="@/assets/djdeveloper_index.png" style="max-width: 650px">
+        </div>
+
+    </div>
+</div>

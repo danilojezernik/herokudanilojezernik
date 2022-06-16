@@ -1,0 +1,24 @@
+.blink::after {
+    content: '|';
+    animation: blink 1s infinite step-start;
+}
+
+.blink {
+    display: inline-block;
+    padding-left: 10px;
+}
+.p-vertical {
+    writing-mode: vertical-rl;
+    /*text-orientation: sideways;*/
+    transform:scale(-1);
+}
+
+.txt-size {
+    font-size: 12px;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

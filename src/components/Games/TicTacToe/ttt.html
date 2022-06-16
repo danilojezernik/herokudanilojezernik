@@ -1,0 +1,125 @@
+<h1 class="p-4 text-center">TicTacToe Game</h1>
+
+<div class="row">
+    <!-- O -->
+    <div class="col-4">
+        <div class="d-flex align-items-center justify-content-center" style="height:50%">
+            <div class="p-2 bd-highlight col-example text-center">
+                <p class="fs-2">križec:</p>
+                <p class="fs-1">{{ this.krizec }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAME -->
+    <div class="col-4">
+        <div class="text-center p-5">
+
+
+            <table class="table text-white" style="width: 300px; height: 300px; margin:0 auto;">
+
+                <tr style="height: 70px; width: 70px">
+                    <td style="height: 70px; width: 70px" class="border-start-0 border-end fs-1" @click="this.dodajZeton(0,0)">
+                        {{ plosca.getZeton(0, 0).simbol }}
+                    </td>
+                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,0)">
+                        {{ plosca.getZeton(1, 0).simbol }}
+                    </td>
+                    <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(2,0)">
+                        {{ plosca.getZeton(2, 0).simbol }}
+                    </td>
+
+                </tr>
+
+                <tr style="height: 70px; width: 70px">
+                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(0,1)">
+                        {{ plosca.getZeton(0, 1).simbol }}
+                    </td>
+                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,1)">
+                        {{ plosca.getZeton(1, 1).simbol }}
+                    </td>
+                    <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(2,1)">
+                        {{ plosca.getZeton(2, 1).simbol }}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(0,2)">
+                        {{ plosca.getZeton(0, 2).simbol }}
+                    </td>
+                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(1,2)">
+                        {{ plosca.getZeton(1, 2).simbol }}
+                    </td>
+                    <td style="height: 70px; width: 70px" class="border-bottom-0 fs-1" @click="this.dodajZeton(2,2)">
+                        {{ plosca.getZeton(2, 2).simbol }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- X -->
+    <div class="col-4">
+        <div class="d-flex align-items-center justify-content-center" style="height:50%">
+            <div class="p-2 bd-highlight col-example text-center">
+                <p class="fs-2">krožec:</p>
+                <p class="fs-1">{{ this.krozec }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-outline-success btn-lg my-3" type="button" @click="this.reset()">Reset</button>
+
+</div>
+<router-link class="btn btn-danger btn-lg m-5" type="button" to="/games">Back to Games</router-link>
+<!--<div class="text-center p-5">-->
+
+
+<!--    <table class="table text-white" style="width: 300px; height: 300px; margin:0 auto;">-->
+
+<!--        <tr style="height: 70px; width: 70px">-->
+<!--            <td style="height: 70px; width: 70px" class="border-start-0 border-end fs-1" @click="this.dodajZeton(0,0)">-->
+<!--                {{ plosca.getZeton(0, 0).simbol }}-->
+<!--            </td>-->
+<!--            <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,0)">-->
+<!--                {{ plosca.getZeton(1, 0).simbol }}-->
+<!--            </td>-->
+<!--            <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(2,0)">-->
+<!--                {{ plosca.getZeton(2, 0).simbol }}-->
+<!--            </td>-->
+
+<!--        </tr>-->
+
+<!--        <tr style="height: 70px; width: 70px">-->
+<!--            <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(0,1)">-->
+<!--                {{ plosca.getZeton(0, 1).simbol }}-->
+<!--            </td>-->
+<!--            <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,1)">-->
+<!--                {{ plosca.getZeton(1, 1).simbol }}-->
+<!--            </td>-->
+<!--            <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(2,1)">-->
+<!--                {{ plosca.getZeton(2, 1).simbol }}-->
+<!--            </td>-->
+<!--        </tr>-->
+
+<!--        <tr>-->
+<!--            <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(0,2)">-->
+<!--                {{ plosca.getZeton(0, 2).simbol }}-->
+<!--            </td>-->
+<!--            <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(1,2)">-->
+<!--                {{ plosca.getZeton(1, 2).simbol }}-->
+<!--            </td>-->
+<!--            <td style="height: 70px; width: 70px" class="border-bottom-0 fs-1" @click="this.dodajZeton(2,2)">-->
+<!--                {{ plosca.getZeton(2, 2).simbol }}-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </table>-->
+
+<!--    <button class="btn btn-outline-success btn-lg my-3" style="width: 20%" @click="this.reset()">Reset</button>-->
+
+<!--    <p>križec: {{ this.krizec }}</p>-->
+<!--    <p>krožce: {{ this.krozec }}</p>-->
+
+<!--</div>-->

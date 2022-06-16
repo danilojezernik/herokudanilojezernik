@@ -1,0 +1,39 @@
+.row {
+    position: relative;
+    height: 100%;
+}
+
+.swiper {
+    width: 70%;
+    height: 70%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: transparent;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide {
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet-active {
+    background: green !important;
+}
