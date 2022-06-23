@@ -1,7 +1,9 @@
 for (let y = 0; y < 3; y++) {
-    console.log("Zacetek sob")
+    // nadstropje
+    console.log("Začetek sob")
     for (let x = 0; x < 3; x++) {
+        // sobe
         process.stdout.write(`${x}`)
     }
-    console.log("konec sob")
+    console.log("Konec sob")
 }

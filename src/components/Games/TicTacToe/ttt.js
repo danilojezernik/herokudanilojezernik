@@ -5,13 +5,17 @@ export default {
         return {
             krizec: 0,
             krozec: 0,
-            plosca: new Plosca(3, 3)
+            plosca: new Plosca(4, 4)
+            // informacija v konstruktorju je w in h!
         }
     },
     methods: {
-        reset() {
-            this.krozec = 0;
+        resetAll() {
             this.krizec = 0;
+            this.krozec = 0;
+            this.plosca.reset()
+        },
+        reset() {
             this.plosca.reset()
         },
         dodajZeton(x, y) {
@@ -19,15 +23,13 @@ export default {
             this.plosca.dodajZeton(x, y)
             let simbol = this.plosca.zmaga()
 
-
-
-            if(simbol !== null) {
+            if (simbol !== null) {
                 this.reset();
 
-                if(simbol === `x`) {
-                    this.krizec ++
+                if (simbol === `X`) {
+                    this.krizec++
                 } else {
-                    this.krozec ++
+                    this.krozec++
                 }
             }
         }

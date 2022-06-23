@@ -42,7 +42,7 @@ function onPointerMove(event) {
 
 }
 
-function animate () {
+function animate() {
   requestAnimationFrame(animate);
 
   const time = Date.now() * 0.00005;
@@ -60,9 +60,7 @@ function animate () {
 
 export default {
   data: () => {
-    return {
-
-    }
+    return {}
   },
   methods: {
 
@@ -76,7 +74,8 @@ export default {
       const geometry = new THREE.BufferGeometry();
       const vertices = [];
 
-      const sprite = new THREE.TextureLoader().load('https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png');
+      // PICTURE WAS LOADED ON WIKIMEDIA AND USED IN THREE.JS
+      const sprite = new THREE.TextureLoader().load('https://upload.wikimedia.org/wikipedia/commons/b/ba/Daniloejezernik.png');
 
 
       for (let i = 0; i < 1000; i++) {
@@ -104,19 +103,15 @@ export default {
       scene.add(particles);
 
       //
-
-      renderer = new THREE.WebGLRenderer( { alpha: true } );
+      renderer = new THREE.WebGLRenderer({alpha: true});
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
       //
-
-
       document.body.addEventListener('pointermove', onPointerMove);
 
       //
-
       window.addEventListener('resize', onWindowResize);
     }
   }, mounted() {
@@ -124,15 +119,13 @@ export default {
     animate();
   }
 }
-
-
 </script>
 
-<style scoped>
+<style>
 .senca {
-  -webkit-box-shadow: 0px 0px 25px 5px rgba(72,138,85,1);
-  -moz-box-shadow: 0px 0px 25px 5px rgba(72,138,85,1);
-  box-shadow: 0px 0px 25px 5px rgba(72,138,85,1);
+  -webkit-box-shadow: 0px 0px 100px 1px black;
+  -moz-box-shadow: 0px 0px 100px 1px black;
+  box-shadow: 0px 0px 100px 1px black;
 }
 
 @media screen and (max-width: 600px) {
