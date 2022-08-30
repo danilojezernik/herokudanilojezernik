@@ -4,7 +4,7 @@ export default {
     data() {
         return {
             repositories: [],
-            api: "http://localhost:3030/github"
+            api: "https://server-portfelia.herokuapp.com/github"
         }
     },
     methods: {

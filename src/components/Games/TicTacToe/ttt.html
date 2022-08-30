@@ -1,121 +1,133 @@
 <div class="container p-4">
 
 
-<h1 class="p-4 text-center">TicTacToe Game</h1>
+    <h1 class="p-4 text-center">TicTacToe Game</h1>
 
-<div class="row">
-    <!-- O -->
-    <div class="col-md-3 d-none d-md-block d-lg-block">
-        <div class="d-flex align-items-center justify-content-center" style="height:50%">
-            <div class="p-2 bd-highlight col-example text-center">
-                <p class="fs-2"><img src="@/assets/x.png" width="100"></p>
-                <p class="fs-1">Points: {{ this.krizec }}</p>
+    <div class="row">
+        <!-- O -->
+        <div class="col-md-3 d-none d-md-block d-lg-block">
+            <div class="d-flex align-items-center justify-content-center" style="height:50%">
+                <div class="p-2 bd-highlight col-example text-center">
+                    <p class="fs-2"><img src="@/assets/x.png" width="100"></p>
+                    <p class="fs-1">Points: {{ this.krizec }}</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- GAME -->
-    <div class="col-md-6">
-        <div class="text-center p-md-5">
+        <!-- GAME -->
+        <div class="col-md-6" onmousedown="return false">
+            <div class="text-center p-md-5">
 
-            <table class="table text-white" style="max-width: 300px; max-height: 300px; margin:0 auto;">
+                <table class="table text-white" style="max-width: 300px; max-height: 300px; margin:0 auto;">
 
-                <tr style="height: 70px; width: 70px">
-                    <td style="height: 70px; width: 70px" class="border-start-0 border-end fs-1" @click="this.dodajZeton(0,0)">
-                        {{ plosca.getZeton(0, 0).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,0)">
-                        {{ plosca.getZeton(1, 0).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(2,0)">
-                        {{ plosca.getZeton(2, 0).simbol }}
-                    </td>
+                    <tr style="height: 70px; width: 70px">
+                        <td style="height: 70px; width: 70px" class="border-start-0 border-end fs-1"
+                            @click="this.dodajZeton(0,0)">
+                            {{ plosca.getZeton(0, 0).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,0)">
+                            {{ plosca.getZeton(1, 0).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(2,0)">
+                            {{ plosca.getZeton(2, 0).simbol }}
+                        </td>
 
-                    <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(3,0)">
-                        {{ plosca.getZeton(3, 0).simbol }}
-                    </td>
+                        <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(3,0)">
+                            {{ plosca.getZeton(3, 0).simbol }}
+                        </td>
 
-                </tr>
+                    </tr>
 
-                <tr style="height: 70px; width: 70px">
-                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(0,1)">
-                        {{ plosca.getZeton(0, 1).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,1)">
-                        {{ plosca.getZeton(1, 1).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(2,1)">
-                        {{ plosca.getZeton(2, 1).simbol }}
-                    </td>
+                    <tr style="height: 70px; width: 70px">
+                        <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(0,1)">
+                            {{ plosca.getZeton(0, 1).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(1,1)">
+                            {{ plosca.getZeton(1, 1).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end fs-1" @click="this.dodajZeton(2,1)">
+                            {{ plosca.getZeton(2, 1).simbol }}
+                        </td>
 
-                    <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(3,1)">
-                        {{ plosca.getZeton(3, 1).simbol }}
-                    </td>
-                </tr>
+                        <td style="height: 70px; width: 70px" class="fs-1" @click="this.dodajZeton(3,1)">
+                            {{ plosca.getZeton(3, 1).simbol }}
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(0,2)">
-                        {{ plosca.getZeton(0, 2).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(1,2)">
-                        {{ plosca.getZeton(1, 2).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(2,2)">
-                        {{ plosca.getZeton(2, 2).simbol }}
-                    </td>
+                    <tr>
+                        <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1"
+                            @click="this.dodajZeton(0,2)">
+                            {{ plosca.getZeton(0, 2).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1"
+                            @click="this.dodajZeton(1,2)">
+                            {{ plosca.getZeton(1, 2).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1"
+                            @click="this.dodajZeton(2,2)">
+                            {{ plosca.getZeton(2, 2).simbol }}
+                        </td>
 
-                    <td style="height: 70px; width: 70px" class="border-bottom-0 fs-1" @click="this.dodajZeton(3,2)">
-                        {{ plosca.getZeton(3, 2).simbol }}
-                    </td>
-                </tr>
+                        <td style="height: 70px; width: 70px" class="border-bottom-0 fs-1"
+                            @click="this.dodajZeton(3,2)">
+                            {{ plosca.getZeton(3, 2).simbol }}
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(0,3)">
-                        {{ plosca.getZeton(0, 3).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(1,3)">
-                        {{ plosca.getZeton(1, 3).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1" @click="this.dodajZeton(2,3)">
-                        {{ plosca.getZeton(2, 3).simbol }}
-                    </td>
-                    <td style="height: 70px; width: 70px" class="border-bottom-0 fs-1" @click="this.dodajZeton(3,3)">
-                        {{ plosca.getZeton(3, 3).simbol }}
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <!-- O and X on mobile -->
-    <div class="col-md-4 pt-5 d-block d-md-none d-lg-none">
-        <div class="d-flex align-items-center justify-content-center" style="height:50%">
-            <div class="p-2 bd-highlight col-example text-center">
-                <p class="fs-2"><img src="@/assets/x.png" width="100"></p>
-                <p class="fs-1">Points: {{ this.krizec }}</p>
-            </div>
-            <div class="ms-auto p-2">
-                <p class="fs-2"><img src="@/assets/o.png" width="100"></p>
-                <p class="fs-1">Points: {{ this.krozec }}</p>
+                    <tr>
+                        <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1"
+                            @click="this.dodajZeton(0,3)">
+                            {{ plosca.getZeton(0, 3).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1"
+                            @click="this.dodajZeton(1,3)">
+                            {{ plosca.getZeton(1, 3).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-end border-bottom-0 fs-1"
+                            @click="this.dodajZeton(2,3)">
+                            {{ plosca.getZeton(2, 3).simbol }}
+                        </td>
+                        <td style="height: 70px; width: 70px" class="border-bottom-0 fs-1"
+                            @click="this.dodajZeton(3,3)">
+                            {{ plosca.getZeton(3, 3).simbol }}
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
-    </div>
 
-    <!-- X -->
-    <div class="col-md-3 d-none d-md-block d-lg-block">
-        <div class="d-flex align-items-center justify-content-center" style="height:50%">
-            <div class="p-2 bd-highlight col-example text-center">
-                <p class="fs-2"><img src="@/assets/o.png" width="100"></p>
-                <p class="fs-1">Points: {{ this.krozec }}</p>
+        <!-- O and X on mobile -->
+        <div class="col-md-4 pt-5 d-block d-md-none d-lg-none">
+            <div class="d-flex align-items-center justify-content-center" style="height:50%">
+                <div class="p-2 bd-highlight col-example text-center">
+                    <p class="fs-2"><img src="@/assets/x.png" width="100"></p>
+                    <p class="fs-1">Points: {{ this.krizec }}</p>
+                </div>
+                <div class="ms-auto p-2">
+                    <p class="fs-2"><img src="@/assets/o.png" width="100"></p>
+                    <p class="fs-1">Points: {{ this.krozec }}</p>
+                </div>
             </div>
         </div>
+
+        <!-- X -->
+        <div class="col-md-3 d-none d-md-block d-lg-block">
+            <div class="d-flex align-items-center justify-content-center" style="height:50%">
+                <div class="p-2 bd-highlight col-example text-center">
+                    <p class="fs-2"><img src="@/assets/o.png" width="100"></p>
+                    <p class="fs-1">Points: {{ this.krozec }}</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+    <div class="d-grid gap-2 col-md-4 mx-auto">
+        <button class="btn btn-outline-success btn-lg" type="button" @click="this.reset()">Board Reset TicTacToe
+        </button>
+        <button class="btn btn-outline-danger btn-lg" type="button" @click="this.resetAll()">Full Reset TicTacToe
+        </button>
+    </div>
 </div>
 
-<div class="d-grid gap-2 col-md-4 mx-auto">
-    <button class="btn btn-outline-success btn-lg" type="button" @click="this.reset()">Board Reset TicTacToe</button>
-    <button class="btn btn-outline-danger btn-lg" type="button" @click="this.resetAll()">Full Reset TicTacToe</button>
-    <router-link class="btn btn-outline-secondary btn-lg" type="button" to="/games">Back to Games</router-link>
-</div>
-</div>
+<app-goback/>

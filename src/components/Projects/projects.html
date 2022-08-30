@@ -1,30 +1,95 @@
-<div class="container text-center p-md-5 p-3">
+<div class="container text-center px-md-5 p-3">
 
-    <h1 class="py-4">Projects</h1>
+    <h1 class="pt-4">Projects</h1>
+    <img src="@/assets/projects-team-work.png" class="img-fluid">
 
-    <div class="row row-cols-1 row-cols-md-2 g-4 p-md-4">
+<!--    <router-link to="/games" class="text-decoration-none text-white">-->
+<!--        <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca">-->
+<!--            <div class="row g-0">-->
+<!--                <div class="col-md-4 p-3 d-flex align-items-center justify-content-center">-->
+<!--                    <h2 class="rounded-start text-success">Games</h2>-->
+<!--                </div>-->
+<!--                <div class="col-md-8">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">Games</h5>-->
+<!--                        <p class="card-text">Games made in Vue 3 with classes. </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </router-link>-->
 
-        <div class="col" v-for="project in projects" :key="project.id">
-            <div class="card text-light bg-dark mb-3 senca">
-                <div class="card-header fs-2 text-success border-secondary">
-                    {{ project.name }}
-                    <p class="card-title text-white">
-                        {{ project.what }}
-                    </p>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">
-                        {{ project.description }}
-                    </p>
-                    <div class="d-grid gap-2">
-                        <router-link class="btn btn-success" type="button" :to="`${project.path}`">Button</router-link>
+    <!--    <router-link to="/projects/beginner" class="text-decoration-none text-white">-->
+    <!--        <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca">-->
+    <!--            <div class="row g-0">-->
+    <!--                <div class="col-md-4 p-3 d-flex align-items-center justify-content-center">-->
+    <!--                    <h2 class="rounded-start text-success">Freelance Projects</h2>-->
+    <!--                </div>-->
+    <!--                <div class="col-md-8">-->
+    <!--                    <div class="card-body">-->
+    <!--                        <h5 class="card-title">Card title</h5>-->
+    <!--                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
+    <!--                            additional content. This content is a little bit longer.</p>-->
+    <!--                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </router-link>-->
+
+    <!--    <router-link to="/github-projects" class="text-decoration-none text-white">-->
+    <!--        <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca">-->
+    <!--            <div class="row g-0">-->
+    <!--                <div class="col-md-4 p-3 d-flex align-items-center justify-content-center">-->
+    <!--                    <h2 class="rounded-start text-success">GitHub Repositories</h2>-->
+    <!--                </div>-->
+    <!--                <div class="col-md-8">-->
+    <!--                    <div class="card-body">-->
+    <!--                        <h5 class="card-title">Card title</h5>-->
+    <!--                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
+    <!--                            additional content. This content is a little bit longer.</p>-->
+    <!--                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </router-link>-->
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <router-link to="/games" class="text-decoration-none text-white">
+            <div class="col">
+                <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Games</h5>
+                        <p class="card-text"></p>
                     </div>
                 </div>
-                <div class="card-footer fs-6 bg-transparent border-secondary">
-                    {{ project.build }}
+            </div>
+        </router-link>
+
+        <router-link to="/projects/beginner" class="text-decoration-none text-white">
+            <div class="col">
+                <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Freelance Projects</h5>
+                        <p class="card-text"></p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </router-link>
+
+        <router-link to="/github-projects" class="text-decoration-none text-white">
+            <div class="col">
+                <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">GitHub Projects</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+        </router-link>
 
     </div>
+
 </div>

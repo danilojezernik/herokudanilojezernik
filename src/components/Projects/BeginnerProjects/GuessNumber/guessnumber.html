@@ -1,0 +1,61 @@
+<div class="container text-center p-md-5 p-3">
+    <vue-final-modal v-model="showModal" classes="modal-container text-black" content-class="modal-content">
+        <button class="modal__close border-0 bg-transparent fs-4" @click="showModal = false">
+            <mdi-close>X</mdi-close>
+        </button>
+        <span class="modal__title mb-4">Ugani število od 1 do 50</span>
+        <div class="modal__content">
+            <p><strong>Game rules</strong>: You have the option to choose numbers between 1 and 50. The game will select
+                a random number in the background and you have to guess it. Of course, to make the game easier and more
+                fun, the selected number reminds you whether you have chosen too big or too small number.</p>
+
+            <p>You win when you guess a random number and the result of previous victories keeps a record of the numbers
+                that were winning before. Have fun!</p>
+        </div>
+    </vue-final-modal>
+    <h1 class="text-center pb-3">
+        Guess the Number from 1 - 50
+    </h1>
+    <v-button class="btn btn-outline-warning my-4" @click="showModal = true">Game Rules</v-button>
+
+    <p class="text-center fs-4">Your selected number: {{ this.rezultat || 0 }}</p>
+    <div class="row justify-content-center">
+        <div class="col-sm-12">
+
+            <div class="input-group mb-3">
+                <input @keyup.enter="vnesi" v-model="stevilo" type="text" class="form-control bg-transparent text-white"
+                       placeholder="Enter the number and press enter">
+                <button @click="ponovnaIgra" class="btn btn-outline-secondary" type="button">Play again</button>
+                <button @click="resetVsega" class="btn btn-outline-danger" type="button">Reset</button>
+            </div>
+            <div class="input-group mb-3">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-6 text-center fs-3">
+
+            {{ this.sporocilo }}
+
+        </div>
+    </div>
+</div>
+
+
+<div v-show="pokazi" class="text-center">
+    <div class="row justify-content-center mt-3">
+        <div class="col-sm-12">
+
+            <p class="lead text-white">Your previous numbers that made you win: <span class="text-danger fw-bold"
+                                                                                      v-for="zgodovina in zg">
+    {{ zgodovina + ", " }}</span></p>
+
+        </div>
+
+    </div>
+</div>
+
+<app-goback />

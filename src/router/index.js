@@ -2,17 +2,22 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 // HOME PAGE
 import IndexComp from '@/components/Index/IndexComp.vue'
-
-// MY BIOGRAPHY
 import BiographyComp from '@/components/Biography/BiographyComp.vue'
 import ExperiencesComp from '@/components/Experiences/ExperiencesComp.vue'
 import GitHubComp from '@/components/GitHub/GitHubComp.vue'
 import ContactComp from '@/components/Contact/ContactComp.vue'
 import MediaComp from '@/components/Media/MediaComp.vue'
+import LinksComp from '@/components/Links/LinksComp.vue'
 
 // PROJECTS
 import ProjectsComp from '@/components/Projects/ProjectsComp.vue'
-import CountdownComp from '@/components/Projects/Countdown/CountdownComp.vue'
+import BeginnerProjectsComp from '@/components/Projects/BeginnerProjects/BeginnerProjectsComp.vue'
+import CountdownComp from '@/components/Projects/BeginnerProjects/Countdown/CountdownComp.vue'
+import UnitConverterComp from '@/components/Projects/BeginnerProjects/UnitConverter/ConverterComp.vue'
+import GuessNumberComp from '@/components/Projects/BeginnerProjects/GuessNumber/GuessNumberComp.vue'
+import WeatherAppComp from '@/components/Projects/BeginnerProjects/WeatherApp/WeatherAppComp.vue'
+import NumerologyComp from '@/components/Projects/BeginnerProjects/Numerology/NumerologyComp.vue'
+import ToDoComp from '@/components/Projects/BeginnerProjects/ToDo/ToDoComp.vue'
 
 // GAMES
 import GamesComp from '@/components/Games/GamesComp.vue'
@@ -39,7 +44,7 @@ const routes = [
         component: ContactComp
     },
     {
-        path: '/github',
+        path: '/github-projects',
         component: GitHubComp
     },
     {
@@ -47,8 +52,32 @@ const routes = [
         component: ProjectsComp
     },
     {
+        path: '/projects/beginner',
+        component: BeginnerProjectsComp
+    },
+    {
         path: '/projects/countdown',
         component: CountdownComp
+    },
+    {
+        path: '/projects/converter',
+        component: UnitConverterComp
+    },
+    {
+        path: '/projects/guess-number',
+        component: GuessNumberComp
+    },
+    {
+        path: '/projects/weather-app',
+        component: WeatherAppComp
+    },
+    {
+        path: '/projects/numerology',
+        component: NumerologyComp
+    },
+    {
+        path: '/projects/todo',
+        component: ToDoComp
     },
     {
         path: '/games',
@@ -61,6 +90,10 @@ const routes = [
     {
         path: '/media',
         component: MediaComp
+    },
+    {
+        path: '/links',
+        component: LinksComp
     },
     {
         path: '/:notFound(.*)',

@@ -1,0 +1,302 @@
+<div class="container text-center p-md-5 p-3">
+    <div class="container d-grid gap-2 mx-auto my-md-3">
+        <h1 class="text-center pb-3" data-v-step="korak-zacetek">
+            Unit Converter
+        </h1>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+
+            <!-- Vnesena vrednost -->
+            <div class="d-flex bg-transparent bd-highlight mb-2 border">
+                <div class="p-4 w-100 bd-highlight fs-5">Entered value:</div>
+                <div class="p-4 flex-shrink-1 bd-highlight">
+                    <span class="fs-3 fw-bold" data-v-step="korak-2">
+                     {{ this.prostornina || this.temp || this.dolzina || this.hitrost || this.cas || this.masa || 0 }}
+                </span>
+
+                </div>
+            </div>
+
+            <!--Temperatura-->
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control text-white bg-transparent"
+                       data-v-step="korak-3"
+                       v-model.number="temp"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+                <div class="btn btn-outline-secondary dropdown-toggle btn-lg" data-bs-toggle="dropdown"
+                     aria-expanded="false" data-v-step="korak-4">Temperatura
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" @click="celzija">
+                        <span class="fw-bold fs-4">°C</span>
+                        v
+                        <span class="fw-bold fs-4">°F</span>
+                    </li>
+                    <li class="dropdown-item" @click="farenheight">
+                        <span class="fw-bold fs-4">°F</span>
+                        v
+                        <span class="fw-bold fs-4">°C</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Prostornina-->
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control text-white bg-transparent"
+                       data-v-step="korak-3"
+                       v-model.number="prostornina"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+                <div class="btn btn-outline-secondary dropdown-toggle btn-lg" data-bs-toggle="dropdown"
+                     aria-expanded="false" data-v-step="korak-4">Prostornina
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" @click="liter">
+                        <span class="fw-bold fs-4">l</span>
+                        v
+                        <span class="fw-bold fs-4">dl</span>
+                    </li>
+                    <li class="dropdown-item" @click="deciliter">
+                        <span class="fw-bold fs-4">dl</span>
+                        v
+                        <span class="fw-bold fs-4">l</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="deci">
+                        <span class="fw-bold fs-4">dl</span>
+                        v
+                        <span class="fw-bold fs-4">ml</span>
+                    </li>
+                    <li class="dropdown-item" @click="mili">
+                        <span class="fw-bold fs-4">ml</span>
+                        v
+                        <span class="fw-bold fs-4">dl</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Dolzina-->
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control text-white bg-transparent"
+                       v-model.number="dolzina"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+                <div class="btn btn-outline-secondary dropdown-toggle btn-lg" data-bs-toggle="dropdown"
+                     aria-expanded="false">Dolžina
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" @click="centimeter">
+                        <span class="fw-bold fs-4">m</span>
+                        v
+                        <span class="fw-bold fs-4">cm</span>
+                    </li>
+                    <li class="dropdown-item" @click="meter">
+                        <span class="fw-bold fs-4">cm</span>
+                        v
+                        <span class="fw-bold fs-4">m</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="centi">
+                        <span class="fw-bold fs-4">cm</span>
+                        v
+                        <span class="fw-bold fs-4">mm</span>
+                    </li>
+                    <li class="dropdown-item" @click="milimeter">
+                        <span class="fw-bold fs-4">mm</span>
+                        v
+                        <span class="fw-bold fs-4">cm</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="kilometer">
+                        <span class="fw-bold fs-4">km</span>
+                        v
+                        <span class="fw-bold fs-4">milja</span>
+                    </li>
+                    <li class="dropdown-item" @click="milja">
+                        <span class="fw-bold fs-4">mimilja</span>
+                        v
+                        <span class="fw-bold fs-4">km</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Hitrost-->
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control text-white bg-transparent"
+                       v-model.number="hitrost"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+                <div class="btn btn-outline-secondary dropdown-toggle btn-lg" data-bs-toggle="dropdown"
+                     aria-expanded="false">Hitrost
+                </div>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item" @click="kmnamin">
+                        <span class="fw-bold fs-4">km/h</span>
+                        v
+                        <span class="fw-bold fs-4">m/s</span>
+                    </li>
+                    <li class="dropdown-item" @click="minnasek">
+                        <span class="fw-bold fs-4">m/s</span>
+                        v
+                        <span class="fw-bold fs-4">km/h</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="hitrostzvoka">
+                        <span class="fw-bold fs-4">km/h</span>
+                        v
+                        <span class="fw-bold fs-4">Mach</span>
+                    </li>
+                    <li class="dropdown-item" @click="hitrostzvokakm">
+                        <span class="fw-bold fs-4">Mach</span>
+                        v
+                        <span class="fw-bold fs-4">km/h</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="svetlobaM">
+                        <span class="fw-bold fs-4">Mach</span>
+                        v
+                        <span class="fw-bold fs-4">Svetlobna[c]</span>
+                    </li>
+                    <li class="dropdown-item" @click="Msvetloba">
+                        <span class="fw-bold fs-4">Svetlobna[c]</span>
+                        v
+                        <span class="fw-bold fs-4">Mach</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Masa-->
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control text-white bg-transparent"
+                       v-model.number="masa"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                <div class="btn btn-outline-secondary dropdown-toggle btn-lg" data-bs-toggle="dropdown"
+                     aria-expanded="false">Masa
+                </div>
+                <ul class="dropdown-menu p-0">
+                    <li class="dropdown-item" @click="kilogram">
+                        <span class="fw-bold fs-4">kg</span>
+                        v
+                        <span class="fw-bold fs-4">dag</span>
+                    </li>
+                    <li class="dropdown-item" @click="dekagram">
+                        <span class="fw-bold fs-4">dag</span>
+                        v
+                        <span class="fw-bold fs-4">kg</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="deg">
+                        <span class="fw-bold fs-4">dag</span>
+                        v
+                        <span class="fw-bold fs-4">g</span>
+                    </li>
+                    <li class="dropdown-item" @click="gram">
+                        <span class="fw-bold fs-4">g</span>
+                        v
+                        <span class="fw-bold fs-4">dag</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="grami">
+                        <span class="fw-bold fs-4">g</span>
+                        v
+                        <span class="fw-bold fs-4">mg</span>
+                    </li>
+                    <li class="dropdown-item" @click="miligrami">
+                        <span class="fw-bold fs-4">mg</span>
+                        v
+                        <span class="fw-bold fs-4">g</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Čas-->
+            <div class="input-group mb-3">
+
+                <input type="text" class="form-control text-white bg-transparent"
+                       v-model.number="cas"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                <div class="btn btn-outline-secondary dropdown-toggle btn-lg" data-bs-toggle="dropdown"
+                     aria-expanded="false">Čas
+                </div>
+                <ul class="dropdown-menu p-0">
+                    <li class="dropdown-item" @click="minute">
+                        <span class="fw-bold fs-4">min</span>
+                        v
+                        <span class="fw-bold fs-4">sek</span>
+                    </li>
+                    <li class="dropdown-item" @click="sekunde">
+                        <span class="fw-bold fs-4">sek</span>
+                        v
+                        <span class="fw-bold fs-4">min</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="leto">
+                        <span class="fw-bold fs-4">sek</span>
+                        v
+                        <span class="fw-bold fs-4">leto</span>
+                    </li>
+                    <li class="dropdown-item" @click="letosek">
+                        <span class="fw-bold fs-4">leto</span>
+                        v
+                        <span class="fw-bold fs-4">sek</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li class="dropdown-item" @click="desetletje">
+                        <span class="fw-bold fs-4">sek</span>
+                        v
+                        <span class="fw-bold fs-4">Desetletje</span>
+                    </li>
+                    <li class="dropdown-item" @click="sekundedesetletje">
+                        <span class="fw-bold fs-4">Desetletje</span>
+                        v
+                        <span class="fw-bold fs-4">sek</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Zgodovina -->
+        <div class="col-lg-5 border" style="overflow-y: scroll; height:525px;" data-v-step="korak-zadnji">
+            <div class="p-2 bd-highlight text-center  text-white bg-transparent" v-for="zg in zgodovina">
+                {{ this.datum() }}: <span class="fs-4">{{ zg }}</span>
+            </div>
+            <div class="d-grid gap-2">
+                <button v-show="pokaziIzbris" class="btn btn-outline-danger rounded-0" @click="izbrisVse">Delete history
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <v-tour name="myTour" :steps="koraki" :options="siGumbi"></v-tour>
+
+</div>
+
+<app-goback />

@@ -1,0 +1,41 @@
+<div class="container text-center p-md-5 p-3">
+    <h1 class="text-center pb-3">
+        Weather App
+    </h1>
+    <div class="row p-3">
+        <div class="col-lg-3"><!-- PRAZEN PROSTOR LEVO --></div>
+
+        <div class="col-lg-6 p-md-5 py-3 bg-light senca rounded"
+             :class="typeof weather.main !== `undefined` && weather.main.temp > 16 ? `bg-sunny` : `bg-rain`">
+            <!-- ISKALNIK -->
+            <main>
+                <div class="form-floating mb-3">
+                    <input
+                            type="text"
+                            class="form-control border-dark shadow-lg text-black"
+                            placeholder="Search..."
+                            v-model="query"
+                            @keyup.enter="fetchWeather"
+                    />
+                    <label class="text-secondary">Search...</label>
+                </div>
+            </main>
+
+            <!-- PRIKAZ REZULTATOV -->
+            <div class="text-center text-white p-3" v-if="typeof weather.main !== `undefined`">
+                <span class="fs-2 fw-bold text-shadow-border">{{ weather.name }}, {{ weather.sys.country }}</span><br>
+                <span class="fst-italic text-black text-shadow">{{ dateBuilder() }}</span><br>
+                <p class="p-4 shadow-lg text-black rounded shadow text-shadow my-3 bg-glass mx-auto fs-1" style="width: 30%">
+                    {{ Math.round(weather.main.temp) }}°C</p>
+                <span class="fs-1 text-shadow-border">{{ weather.weather[0].main }}</span>
+            </div>
+            {{ message }}
+        </div>
+
+        <div class="col-lg-3"><!-- PRAZEN POROSTOR DESNO --></div>
+
+    </div>
+</div>
+
+<app-goback />
+

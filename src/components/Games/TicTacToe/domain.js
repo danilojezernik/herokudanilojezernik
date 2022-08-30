@@ -14,6 +14,7 @@ export class Plosca {
             zeton = new Zeton("O", x, y)
         }
         this.zetoni.push(zeton)
+
     }
 
     reset() {
@@ -21,8 +22,7 @@ export class Plosca {
     }
 
     zmaga() {
-
-// horizontala
+    // horizontala
         for (let y = 0; y < this.h; y++) {
             let simbol = this.getZeton(0, y).simbol
 
@@ -42,8 +42,7 @@ export class Plosca {
                 }
             }
         }
-
-//vertikala
+    //vertikala
         for (let x = 0; x < this.w; x++) {
             let simbol = this.getZeton(x, 0).simbol
             if (simbol !== null) {

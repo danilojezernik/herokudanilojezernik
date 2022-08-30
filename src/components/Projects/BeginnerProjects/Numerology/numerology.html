@@ -1,0 +1,124 @@
+<div class="container text-center p-md-5 p-3">
+    <div class="text-center">
+        <h1>Numerologija</h1>
+        <h4>Številka življenjeske poti</h4>
+        <p>Računalo osnovano na vaših rojstnih podatkih</p>
+        <p>Danes je <span class="text-success">{{ danVtednu }}</span></p>
+        Naključno število: <span class="text-success">{{ randomNumberShow || 0 }}</span> <br>
+        Število tekočega meseca: <span class="text-success">{{ uniSteviloMeseca || 0 }}</span><br>
+        Število tekočega leta: <span class="text-success">{{ uniSteviloLeta || 0 }}</span><br>
+    </div>
+</div>
+
+<div class="container text-center p-md-3 p-3">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card p-3 bg-light text-black shadow">
+                <p>Vnesite rojstne podatke:</p>
+
+                <!-- DAN -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text rounded-0">Dan rojstva</span>
+                    <input type="text" class="form-control rounded-0" maxlength="2"
+                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                           v-model="danRojstva"
+                           @keyup.enter="izracunLifePathNumber"
+                    >
+                </div>
+
+                <!-- MESEC -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text rounded-0">Mesec rojstva:</span>
+                    <input type="text" class="form-control rounded-0" maxlength="2"
+                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                           v-model="mesecRojstva"
+                           @keyup.enter="izracunLifePathNumber"
+                    >
+                </div>
+
+                <!-- LETO -->
+                <div class="input-group mb-3 rounded-0">
+                    <span class="input-group-text rounded-0">Letnica rojstva</span>
+                    <input type="text" class="form-control rounded-0" maxlength="4"
+                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+                           v-model="letnicaRojstva"
+                           @keyup.enter="izracunLifePathNumber"
+                    >
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary rounded-0" @click="izracunLifePathNumber">Potrdite vnos</button>
+                    <span v-if="vnos" class="alert alert-danger p-2 text-center" role="alert">{{ opozorilo }}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+
+</div>
+
+
+<div class="container text-center p-md-5 p-3">
+    <div class="row">
+
+        <div class="col-lg-3"></div>
+
+
+        <div v-if="aktivno" class="col-lg-6 p-3 bg-transparent">
+
+            <!-- Življenjska pot -->
+            <div class=" border-bottom">
+                <div class="text-center">
+                    <h4 class=" fw-bold">Vaše število <span
+                            class="text-primary fw-bold fs-4 text">življenjske poti</span>
+                        je:</h4>
+                    <span class="m-2 btn btn-primary fs-1">{{ izracunLetaDvehStevil }}</span>
+                </div>
+
+                <p>Število življenjske poti je najpomembnejše število in razumevanje njegovega pomena nekomu pomaga
+                    razumeti, zakaj se stvari dogajajo tako, kot se. Predstavlja pot na kateri ste v tem življenju in
+                    razkriva osebo, katera ste usojeni postati, in razkriva izzive, s katerimi se lahko soočite, da
+                    postane
+                    ta oseba. Izračuna se na podlagi datuma rojstva.</p>
+
+                <div class="text-center my-3 fs-4 text-decoration-underline">{{ opisStevila }}</div>
+
+            </div>
+
+            <!-- Dan rojstva -->
+            <div class="border-bottom">
+                <div class="text-center my-4">
+                    <h4 class="fw-bold">Vaše število <span class="text-primary fw-bold fs-4 text">rojstnega dne</span>
+                        je:
+                    </h4>
+                    <span class="m-2 btn btn-primary fs-1">{{ dan }}</span>
+
+                </div>
+
+                <p>Številka rojstnega dne vpliva na človekove naravne darove. Ta številka lahko nekomu pove
+                    določen talent, s katerim so blagoslovljeni in je v veliko korist njim in svetu. Darilo,
+                    ki naj bi jim pomagalo na njihovi življenjski poti.</p>
+
+                <p>To je enostavno izračunati, saj je to preprosto dan v mesecu, na katerega se je oseba rodila in
+                    torej je številka od 1-31.</p>
+
+                <p class="text-center m-0">Beseda, ki opisuje vaš naravni dar:</p>
+                <p class="text-center fs-4 text-decoration-underline"> {{ enaBeseda }}</p>
+
+                <div class="my-3">
+                    Vaše število dneva ({{ dan }}) na katerega ste se rodili pa {{ steviloRojstva }}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3"></div>
+
+    </div>
+</div>
+
+<app-goback />
+
