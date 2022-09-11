@@ -7,7 +7,6 @@ import ExperiencesComp from '@/components/Experiences/ExperiencesComp.vue'
 import GitHubComp from '@/components/GitHub/GitHubComp.vue'
 import ContactComp from '@/components/Contact/ContactComp.vue'
 import MediaComp from '@/components/Media/MediaComp.vue'
-import LinksComp from '@/components/Links/LinksComp.vue'
 
 // PROJECTS
 import ProjectsComp from '@/components/Projects/ProjectsComp.vue'
@@ -92,10 +91,6 @@ const routes = [
         component: MediaComp
     },
     {
-        path: '/links',
-        component: LinksComp
-    },
-    {
         path: '/:notFound(.*)',
         component: NotFound
     }
@@ -103,8 +98,7 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
-    routes,
-    linkActiveClass: 'active'
+    routes
 })
 
 export default router

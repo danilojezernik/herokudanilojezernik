@@ -1,39 +1,75 @@
 .row {
-    position: relative;
-    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
-.swiper {
-    width: 70%;
-    height: 70%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: transparent;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
 
-.swiper-slide {
-    background-color: transparent;
-    background-position: center;
-    background-size: cover;
-    width: 50%;
-    height: 50%;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.swiper-slide img {
-    display: block;
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
     width: 100%;
-    height: 100%;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
 }
 
-.swiper-pagination-bullet-active {
-    background: green !important;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/*.row {*/
+/*    position: relative;*/
+/*    height: 100%;*/
+/*}*/
+
+/*.swiper {*/
+/*    width: 70%;*/
+/*    height: 70%;*/
+/*    padding-top: 50px;*/
+/*    padding-bottom: 50px;*/
+/*    background-color: transparent;*/
+/*    align-content: center;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.swiper-slide {*/
+/*    background-color: transparent;*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*    width: 50%;*/
+/*    height: 50%;*/
+/*    align-content: center;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.swiper-slide img {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    align-content: center;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.swiper-pagination-bullet-active {*/
+/*    background: green !important;*/
+/*}*/
