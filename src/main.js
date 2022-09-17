@@ -15,12 +15,14 @@ import 'vue3-tour/dist/vue3-tour.css'
 
 import HeaderComp from '@/components/header_footer/Header/HeaderMain.vue'
 import FooterComp from '@/components/header_footer/Footer/FooterMain.vue'
+import Loader from '@/components/Utils/loader.vue'
 import GoBack from '@/components/Utils/goBack.vue'
 
 const app = createApp(App)
 app.component('app-header', HeaderComp)
 app.component('app-footer', FooterComp)
 app.component('app-goback', GoBack)
+app.component(`app-loader`, Loader)
 app.use(vfmPlugin)
 app.use(router)
 app.use(Vue3Tour)
