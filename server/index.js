@@ -3,7 +3,7 @@ const app = express()
 const cors = require('cors')
 const Octokit = require("octokit").Octokit;
 
-const octokit = new Octokit({auth: "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"});
+const octokit = new Octokit({auth: "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"});
 //
 const port = process.env.PORT || 3030
 app.use(cors())
@@ -28,8 +28,10 @@ app.get('/github', (req, res) => {
             })
         }
         res.json(repos);
+    }).catch(error => {
+        console.error("Error retrieving repositories:", error);
+        res.status(500).json({ error: "Failed to retrieve repositories" });
     });
-
 })
 
 app.listen(port, () => {

@@ -3,93 +3,43 @@
     <h1 class="pt-4">Projects</h1>
     <img src="@/assets/projects-team-work.png" class="img-fluid">
 
-<!--    <router-link to="/games" class="text-decoration-none text-white">-->
-<!--        <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca">-->
-<!--            <div class="row g-0">-->
-<!--                <div class="col-md-4 p-3 d-flex align-items-center justify-content-center">-->
-<!--                    <h2 class="rounded-start text-success">Games</h2>-->
-<!--                </div>-->
-<!--                <div class="col-md-8">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Games</h5>-->
-<!--                        <p class="card-text">Games made in Vue 3 with classes. </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </router-link>-->
-
-    <!--    <router-link to="/projects/beginner" class="text-decoration-none text-white">-->
-    <!--        <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca">-->
-    <!--            <div class="row g-0">-->
-    <!--                <div class="col-md-4 p-3 d-flex align-items-center justify-content-center">-->
-    <!--                    <h2 class="rounded-start text-success">Freelance Projects</h2>-->
-    <!--                </div>-->
-    <!--                <div class="col-md-8">-->
-    <!--                    <div class="card-body">-->
-    <!--                        <h5 class="card-title">Card title</h5>-->
-    <!--                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
-    <!--                            additional content. This content is a little bit longer.</p>-->
-    <!--                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </router-link>-->
-
-    <!--    <router-link to="/github-projects" class="text-decoration-none text-white">-->
-    <!--        <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca">-->
-    <!--            <div class="row g-0">-->
-    <!--                <div class="col-md-4 p-3 d-flex align-items-center justify-content-center">-->
-    <!--                    <h2 class="rounded-start text-success">GitHub Repositories</h2>-->
-    <!--                </div>-->
-    <!--                <div class="col-md-8">-->
-    <!--                    <div class="card-body">-->
-    <!--                        <h5 class="card-title">Card title</h5>-->
-    <!--                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to-->
-    <!--                            additional content. This content is a little bit longer.</p>-->
-    <!--                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </router-link>-->
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-
-        <router-link to="/games" class="text-decoration-none text-white">
-            <div class="col">
-                <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Games</h5>
-                        <p class="card-text"></p>
-                    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col pb-2">
+            <div class="card h-100 bg-dark shadow-lg">
+                <div class="card-body">
+                    <h5 class="card-title h3">Games</h5>
+                    <p class="card-text">Working on developing games in different ways and playing with logic.</p>
+                    <router-link to="/games" class="btn btn-success">Lets GO!</router-link>
                 </div>
             </div>
-        </router-link>
-
-        <router-link to="/projects/beginner" class="text-decoration-none text-white">
-            <div class="col">
-                <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Freelance Projects</h5>
-                        <p class="card-text"></p>
-                    </div>
+        </div>
+        <div class="col pb-2">
+            <div class="card h-100 bg-dark shadow-lg">
+                <div class="card-body">
+                    <h5 class="card-title h3">GitHub Projects</h5>
+                    <p class="card-text">A lot of projects and ideas are here. Check it out and let me know what you
+                        think!</p>
+                    <router-link to="/github-projects" class="btn btn-success">Lets GO!</router-link>
                 </div>
             </div>
-        </router-link>
-
-        <router-link to="/github-projects" class="text-decoration-none text-white">
-            <div class="col">
-                <div class="card bg-dark bg-gradient mb-md-5 mb-3 border rounded-0 senca h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">GitHub Projects</h5>
-                        <p class="card-text"></p>
-                    </div>
+        </div>
+        <div class="col pb-2">
+            <div class="card h-100 bg-dark shadow-lg">
+                <div class="card-body">
+                    <h5 class="card-title h3">Freetime Projects</h5>
+                    <p class="card-text">Playing with different projects that crossed my mind.</p>
+                    <router-link to="/projects/beginner" class="btn btn-success">Lets GO!</router-link>
                 </div>
             </div>
-        </router-link>
-
+        </div>
+        <div class="col pb-2">
+            <div class="card h-100 bg-dark shadow-lg">
+                <div class="card-body">
+                    <h5 class="card-title h3">Web development</h5>
+                    <p class="card-text">Building some websites for me or others.</p>
+                    <router-link to="/projects/web" class="btn btn-success">Lets GO!</router-link>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>

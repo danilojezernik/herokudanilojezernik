@@ -17,6 +17,7 @@ import GuessNumberComp from '@/components/Projects/BeginnerProjects/GuessNumber/
 import WeatherAppComp from '@/components/Projects/BeginnerProjects/WeatherApp/WeatherAppComp.vue'
 import NumerologyComp from '@/components/Projects/BeginnerProjects/Numerology/NumerologyComp.vue'
 import ToDoComp from '@/components/Projects/BeginnerProjects/ToDo/ToDoComp.vue'
+import WebComp from '@/components/Web/WebComp.vue'
 
 // GAMES
 import GamesComp from '@/components/Games/GamesComp.vue'
@@ -49,6 +50,10 @@ const routes = [
     {
         path: '/projects',
         component: ProjectsComp
+    },
+    {
+        path: '/projects/web',
+        component: WebComp
     },
     {
         path: '/projects/beginner',

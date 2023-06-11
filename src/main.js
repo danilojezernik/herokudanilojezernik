@@ -9,6 +9,7 @@ import 'animate.css';
 import vfmPlugin from 'vue-final-modal'
 import Vue3Tour from 'vue3-tour'
 const moment = require('moment'); // require
+import { TroisJSVuePlugin } from 'troisjs';
 
 moment().format();
 import 'vue3-tour/dist/vue3-tour.css'
@@ -24,6 +25,7 @@ app.component('app-footer', FooterComp)
 app.component('app-goback', GoBack)
 app.component(`app-loader`, Loader)
 app.use(vfmPlugin)
+app.use(TroisJSVuePlugin);
 app.use(router)
 app.use(Vue3Tour)
 app.use(VueAxios, axios)

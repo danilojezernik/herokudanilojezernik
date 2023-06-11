@@ -1,0 +1,21 @@
+<div class="container text-center px-md-5 p-3">
+
+    <h1 class="py-4">Web development</h1>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col pb-2" v-for="(web, index) in websites" :key="index">
+            <div class="card h-100 bg-dark shadow-lg">
+                <img :src="web.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title h3">{{web.name}}</h5>
+                    <p class="card-text">{{web.description}}</p>
+                    <a :href="web.goTo" class="btn btn-success" target="_blank">Lets GO!</a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{{web.technology}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-goback />
