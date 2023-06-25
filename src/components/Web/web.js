@@ -1,6 +1,7 @@
 import Tarot from '@/assets/siteindex.png'
 import Alen from '@/assets/hypnosisalen.png'
 import My from '@/assets/mywebsite.png'
+import Blog from '@/assets/blogprogramiranje.png'
 
 export default {
     data() {
@@ -29,6 +30,14 @@ export default {
                     technology: 'Vue 3, Node.js, GitHub API, Express.js, Three.js, Photoshop',
                     img: My,
                     goTo: 'https://www.danilojezernik.com'
+                },
+                {
+                    id: 4,
+                    name: 'My blog about programming',
+                    description: 'Blog about programming in python and JavaScript.',
+                    technology: 'Python, Flask, JavaScript, CSS',
+                    img: Blog,
+                    goTo: 'https://blog.danilojezernik.com'
                 }
             ]
         }
