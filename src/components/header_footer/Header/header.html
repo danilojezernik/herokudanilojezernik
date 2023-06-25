@@ -5,27 +5,35 @@
                 <img src="@/assets/favicon.png" width="50">
             </router-link>
         </span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end bg-vue" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end bg-vue" tabindex="-1" id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="@/assets/favicon.png" width="50"></h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
             </div>
             <div class="offcanvas-body text-center bg-light-dark">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                        <router-link class="nav-link hover-underline-animation" to="/" >Home</router-link>
+                        <router-link class="nav-link hover-underline-animation" to="/">Home</router-link>
                     </li>
                     <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
                         <router-link class="nav-link hover-underline-animation" to="/biography">Biography</router-link>
                     </li>
                     <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                        <router-link class="nav-link hover-underline-animation" to="/experiences">Experiences</router-link>
+                        <router-link class="nav-link hover-underline-animation" to="/experiences">Experiences
+                        </router-link>
                     </li>
                     <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
                         <router-link class="nav-link hover-underline-animation" to="/projects">Projects</router-link>
+                    </li>
+                    <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <a class="nav-link hover-underline-animation" href="https://blog.danilojezernik.com/"
+                           target="_blank">Blog</a>
                     </li>
                     <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
                         <router-link class="nav-link hover-underline-animation" to="/media">Media</router-link>
