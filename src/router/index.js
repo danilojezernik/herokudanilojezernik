@@ -7,6 +7,8 @@ import ExperiencesComp from '@/components/Experiences/ExperiencesComp.vue'
 import GitHubComp from '@/components/GitHub/GitHubComp.vue'
 import ContactComp from '@/components/Contact/ContactComp.vue'
 import MediaComp from '@/components/Media/MediaComp.vue'
+import BooksComp from '@/components/Books/BooksComp.vue'
+import LinksComp from '@/components/Links/LinksComp.vue'
 
 // PROJECTS
 import ProjectsComp from '@/components/Projects/ProjectsComp.vue'
@@ -42,6 +44,14 @@ const routes = [
     {
         path: '/contact',
         component: ContactComp
+    },
+    {
+        path: '/books',
+        component: BooksComp
+    },
+    {
+        path: '/links',
+        component: LinksComp
     },
     {
         path: '/github-projects',

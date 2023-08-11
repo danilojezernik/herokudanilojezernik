@@ -22,7 +22,8 @@ export class Plosca {
     }
 
     zmaga() {
-    // horizontala
+
+        // horizontala
         for (let y = 0; y < this.h; y++) {
             let simbol = this.getZeton(0, y).simbol
 
@@ -42,7 +43,8 @@ export class Plosca {
                 }
             }
         }
-    //vertikala
+
+        // vertikala
         for (let x = 0; x < this.w; x++) {
             let simbol = this.getZeton(x, 0).simbol
             if (simbol !== null) {
@@ -57,6 +59,38 @@ export class Plosca {
                 if (zmagal === true) {
                     return simbol;
                 }
+            }
+        }
+
+        // diagonala (zgoraj levo do spodaj desno)
+        let simbol = this.getZeton(0, 0).simbol;
+        if (simbol !== null) {
+            let zmagal = true;
+            for (let i = 0; i < Math.min(this.w, this.h); i++) {
+                let zeton = this.getZeton(i, i);
+                if (simbol !== zeton.simbol) {
+                    zmagal = false;
+                    break;
+                }
+            }
+            if (zmagal) {
+                return simbol;
+            }
+        }
+
+        // diagonala (zgoraj desno do spodaj levo)
+        simbol = this.getZeton(this.w - 1, 0).simbol;
+        if (simbol !== null) {
+            let zmagal = true;
+            for (let i = 0; i < Math.min(this.w, this.h); i++) {
+                let zeton = this.getZeton(this.w - 1 - i, i);
+                if (simbol !== zeton.simbol) {
+                    zmagal = false;
+                    break;
+                }
+            }
+            if (zmagal) {
+                return simbol;
             }
         }
 

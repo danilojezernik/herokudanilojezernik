@@ -15,7 +15,7 @@ export default {
                     id: 2,
                     name: "Unit Converter App",
                     what: "Convert Various Units",
-                    description: "Application is set to countdown until the end of the year 2022. After countdown it changes to message Happy New Year!!",
+                    description: "Application will help you convert various units from one value and unit to another unit. Use it in everyday life!!",
                     build: "JavaScript, Vue3, Moment.js, VueTour, Bootstrap 5",
                     path: "/projects/converter",
                     github: "https://github.com/danilojezernik/my_portfolio"

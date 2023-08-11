@@ -7,7 +7,7 @@ export default {
             prikaziSekunde: 0,
             loaded: false,
             expired: false,
-            year: 2022,
+            year: 2023,
             month: 12,
             date: 31,
             hour: 23,
