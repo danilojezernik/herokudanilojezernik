@@ -19,7 +19,7 @@ export default {
                     id: 2,
                     name: 'Tarot Zate',
                     description: 'Website about spiritual and personal growth through tarot, meditation and much more',
-                    technology: 'Vue 3',
+                    technology: 'Vue 3, Python Flask for Server Side, Heroku',
                     img: Tarot,
                     goTo: 'https://www.tarot-zate.si'
                 },
@@ -27,7 +27,7 @@ export default {
                     id: 3,
                     name: 'My portfolio',
                     description: 'Website about what i do and what I did.',
-                    technology: 'Vue 3, Node.js, GitHub API, Express.js, Three.js, Photoshop',
+                    technology: 'Vue 3, Node.js, GitHub API, Express.js, Three.js, Photoshop, Heroku',
                     img: My,
                     goTo: 'https://www.danilojezernik.com'
                 },
@@ -35,7 +35,7 @@ export default {
                     id: 4,
                     name: 'My blog about programming',
                     description: 'Blog about programming in python and JavaScript.',
-                    technology: 'Python, Flask, JavaScript, CSS',
+                    technology: 'Python, Flask, JavaScript, CSS, Heroku',
                     img: Blog,
                     goTo: 'https://blog.danilojezernik.com'
                 }
