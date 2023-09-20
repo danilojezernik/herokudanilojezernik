@@ -3,7 +3,7 @@ const app = express()
 const cors = require('cors')
 const Octokit = require("octokit").Octokit;
 
-const octokit = new Octokit({auth: "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"});
+const octokit = new Octokit({auth: "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"});
 //
 const port = process.env.PORT || 3030
 app.use(cors())
